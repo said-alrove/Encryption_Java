@@ -20,15 +20,15 @@ public class EncryptionDemo {
 			new InputStreamReader(System.in)
 		);
 		int n = Integer.parseInt(br.readLine());
-		StringBuilder strBuilder = new StringBuilder();
+		char arr[][] = new char[n][];
 		for(int x = 0; x < n; x++) {
-			strBuilder.append(br.readLine()).append("\n");
-		}
-		char arr[] = strBuilder.toString().toCharArray();
-		int m = arr.length;
-		for(int x = 0; x < m; x++) {
-			if(arr[x]>'a' && arr[x]<'z' || arr[x]>'A' && arr[x]<'Z') 
-				arr[x] += 3;
+			arr[x] = br.readLine().toCharArray();
+			int m = arr[x].length;
+			for(int j = 0; j < m; j++) {
+				char temp = arr[x][j];
+				if(temp>'a' && temp<'z' || temp>'A' && temp<'Z')
+					arr[x][j] += 3;
+			}
 		}
 	}
 }
