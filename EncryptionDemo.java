@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 /*
 You have been asked to build a simple encryption program. This program should be able to send coded messages without someone been able to read them. The process is very simple. It is divided into two parts.
 
@@ -36,8 +35,7 @@ public class EncryptionDemo {
 				arr[x][(m-1)-j] = temp;
 			}
 			for( ; p < m; p++) {
-				if(arr[x][p] != 32)
-					arr[x][p]--;
+				arr[x][p]--;
 			}
 		}
 		StringBuilder str = new StringBuilder();
