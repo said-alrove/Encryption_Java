@@ -26,7 +26,7 @@ public class EncryptionDemo {
 			int m = arr[x].length;
 			for(int j = 0; j < m; j++) {
 				char temp = arr[x][j];
-				if(temp>'a' && temp<'z' || temp>'A' && temp<'Z')
+				if(temp>='a' && temp<='z' || temp>='A' && temp<='Z')
 					arr[x][j] += 3;
 			}
 			int p = (int) m/2;
@@ -34,6 +34,10 @@ public class EncryptionDemo {
 				char temp = arr[x][j];
 				arr[x][j] = arr[x][(m-1)-j];
 				arr[x][(m-1)-j] = temp;
+			}
+			for( ; p < m; p++) {
+				if(arr[x][p] != 32)
+					arr[x][p]--;
 			}
 		}
 	}
