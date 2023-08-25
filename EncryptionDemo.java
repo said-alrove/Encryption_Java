@@ -29,6 +29,12 @@ public class EncryptionDemo {
 				if(temp>'a' && temp<'z' || temp>'A' && temp<'Z')
 					arr[x][j] += 3;
 			}
+			int p = (int) m/2;
+			for(int j = 0; j < p; j++) {
+				char temp = arr[x][j];
+				arr[x][j] = arr[x][(m-1)-j];
+				arr[x][(m-1)-j] = temp;
+			}
 		}
 	}
 }
