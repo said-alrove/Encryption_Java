@@ -40,5 +40,10 @@ public class EncryptionDemo {
 					arr[x][p]--;
 			}
 		}
+		StringBuilder str = new StringBuilder();
+		for(int x = 0; x < n; x++) {
+			str.append(arr[x]).append("\n");
+		}
+		System.out.print(str);
 	}
 }
